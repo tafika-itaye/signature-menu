@@ -1,0 +1,65 @@
+---
+import site from "../data/site.json";
+import menu from "../data/menu.json";
+
+const base = import.meta.env.BASE_URL;
+const origin = Astro.site ? Astro.site.origin : "";
+const url = `${origin}${base}`;
+
+const section = (key, name) => ({
+  "@type": "MenuSection",
+  name,
+  hasMenuSection: menu[key].map((cat) => ({
+    "@type": "MenuSection",
+    name: cat.name,
+    hasMenuItem: cat.items
+      .filter((item) => item.available !== false)
+      .map((item) => ({
+        "@type": "MenuItem",
+        name: item.name,
+        ...(item.note ? { description: item.note } : {}),
+        ...(item.diet?.includes("vegetarian") ? { suitableForDiet: "https://schema.org/VegetarianDiet" } : {}),
+        offers: {
+          "@type": "Offer",
+          price: item.price,
+          priceCurrency: "MWK",
+        },
+      })),
+  })),
+});
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: site.fullName,
+  alternateName: site.name,
+  slogan: site.tagline,
+  description: site.blurb,
+  url,
+  image: `${origin}${base}og.jpg`,
+  logo: `${origin}${base}logo.png`,
+  telephone: `+${site.whatsapp}`,
+  servesCuisine: ["Malawian", "Indian", "Fast food", "Grill"],
+  priceRange: "MWK 1,800 to MWK 45,000",
+  currenciesAccepted: "MWK",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: site.town,
+    addressCountry: "MW",
+  },
+  amenityFeature: site.specialties.map((name) => ({
+    "@type": "LocationFeatureSpecification",
+    name,
+    value: true,
+  })),
+  hasMenu: {
+    "@type": "Menu",
+    name: `${site.fullName} menu`,
+    url: `${url}restaurant/`,
+    inLanguage: "en",
+    hasMenuSection: [section("restaurant", "Restaurant"), section("bar", "Bar")],
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline></script>

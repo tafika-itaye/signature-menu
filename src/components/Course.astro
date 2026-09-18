@@ -4,6 +4,12 @@ import site from "../data/site.json";
 const { category } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const money = (n) => `${site.currency} ${n.toLocaleString("en-US")}`;
+
+const DIET = {
+  vegetarian: "Vegetarian",
+  spicy: "Spicy",
+  nuts: "Contains nuts",
+};
 ---
 
 <section class="course" id={category.id}>
@@ -12,13 +18,18 @@ const money = (n) => `${site.currency} ${n.toLocaleString("en-US")}`;
     <span class="count">{category.items.length}</span>
   </header>
   {
-    category.items.map((item) => (
-      <article class="plate">
-        <img src={`${base}img/${item.image}-sm.webp`} alt={item.name} width="240" height="240" loading="lazy" decoding="async" />
-        <h3>{item.name}</h3>
-        <span class="price">{money(item.price)}</span>
-        {item.note && <p>{item.note}</p>}
-      </article>
-    ))
+    category.items.map((item) => {
+      const out = item.available === false;
+      const labels = (item.diet ?? []).map((d) => DIET[d]).filter(Boolean);
+      return (
+        <article class:list={["plate", { out }]}>
+          <img src={`${base}img/${item.image}-sm.webp`} alt={item.name} width="240" height="240" loading="lazy" decoding="async" />
+          <h3>{item.name}</h3>
+          <span class="price">{out ? "Not today" : money(item.price)}</span>
+          {item.note && <p>{item.note}</p>}
+          {labels.length > 0 && <p class="diet">{labels.join(" · ")}</p>}
+        </article>
+      );
+    })
   }
 </section>
