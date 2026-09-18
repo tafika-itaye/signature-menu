@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import TopBar from "../components/TopBar.astro";
+import CategoryDeck from "../components/CategoryDeck.astro";
+import Course from "../components/Course.astro";
+import site from "../data/site.json";
+import menu from "../data/menu.json";
+
+const base = import.meta.env.BASE_URL;
+const categories = menu.restaurant;
+---
+
+<Base title={`Restaurant menu, ${site.name}`}>
+  <TopBar title="Restaurant" hours={`Kitchen ${site.hours.kitchen}`} />
+
+  <div class="sechero">
+    <img src={`${base}img/hero-restaurant.webp`} alt="" width="1200" height="900" loading="eager" decoding="async" />
+    <span class="scrim"></span>
+  </div>
+
+  <CategoryDeck categories={categories} />
+
+  {categories.map((category) => <Course category={category} />)}
+
+  <footer class="foot">
+    Allergies and dietary requirements, tell your server before ordering.<br />
+    Prices in Malawi kwacha and include VAT.
+  </footer>
+</Base>

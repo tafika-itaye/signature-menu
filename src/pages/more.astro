@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import TopBar from "../components/TopBar.astro";
+import site from "../data/site.json";
+import menu from "../data/menu.json";
+
+const base = import.meta.env.BASE_URL;
+const services = menu.services;
+---
+
+<Base title={`Services, ${site.name}`}>
+  <TopBar title="More" />
+
+  <header class="masthead" style="padding-top:24px">
+    <p class="eyebrow">Beyond the table</p>
+    <h1 class="display" style="font-size:var(--step-4)">What else we do</h1>
+    <p class="sub">Three services run out of the same kitchen and bar. Ask on WhatsApp for a quote.</p>
+  </header>
+
+  {
+    services.map((service) => (
+      <article class="service" id={service.id}>
+        <div class="art">
+          <img src={`${base}img/${service.image}.webp`} alt="" width="1200" height="900" loading="lazy" decoding="async" />
+        </div>
+        <div class="body">
+          <h2>{service.name}</h2>
+          <p>{service.bio}</p>
+          <ul>
+            {service.points.map((point) => <li>{point}</li>)}
+          </ul>
+        </div>
+      </article>
+    ))
+  }
+
+  <footer class="foot">
+    <strong>{site.fullName}</strong>, {site.town}. WhatsApp {site.whatsappDisplay}.<br />
+    Quotes are given per event. Deposits secure the date.
+  </footer>
+</Base>

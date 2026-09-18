@@ -1,0 +1,157 @@
+{
+  "restaurant": [
+    {
+      "id": "fastfood",
+      "name": "Fast food",
+      "image": "burger",
+      "items": [
+        { "name": "Signature burger and chips", "note": "200g beef patty, cheddar, lettuce, tomato, hand-cut chips", "price": 15000, "image": "burger" },
+        { "name": "Fish and chips", "note": "Beer battered chambo, tartare, lemon", "price": 16000, "image": "fish-chips" },
+        { "name": "Chicken wrap", "note": "Grilled strips, salad, chilli mayo, chips on the side", "price": 12500, "image": "wrap" },
+        { "name": "Chicken schnitzel", "note": "Crumbed breast, chips, mushroom sauce", "price": 17000, "image": "schnitzel" }
+      ]
+    },
+    {
+      "id": "starters",
+      "name": "Starters",
+      "image": "samosa",
+      "items": [
+        { "name": "Beef samosas", "note": "Three pieces, hand folded, tamarind chilli dip", "price": 4500, "image": "samosa" },
+        { "name": "Vegetable pakora", "note": "Chickpea batter, mint chutney", "price": 4500, "image": "pakora" },
+        { "name": "Chambo fishcakes", "note": "Lake chambo, lime aioli, rocket", "price": 7000, "image": "fishcakes" },
+        { "name": "Soup of the day", "note": "Ask your server, served with warm bread", "price": 5000, "image": "soup" }
+      ]
+    },
+    {
+      "id": "indian",
+      "name": "Indian kitchen",
+      "image": "biryani",
+      "items": [
+        { "name": "Chicken curry", "note": "Slow simmered, served with rice", "price": 15000, "image": "chicken-curry" },
+        { "name": "Butter chicken", "note": "Mild and creamy, rice or naan", "price": 16500, "image": "butter-chicken" },
+        { "name": "Vegetable biryani", "note": "Basmati, whole spices, raita", "price": 12000, "image": "biryani" },
+        { "name": "Chana masala", "note": "Chickpeas, tomato, cumin, naan", "price": 10500, "image": "chana" }
+      ]
+    },
+    {
+      "id": "grill",
+      "name": "From the grill",
+      "image": "tbone",
+      "items": [
+        { "name": "T-bone steak, 400g", "note": "Charcoal grilled, chimichurri, one side", "price": 28000, "image": "tbone" },
+        { "name": "Peri-peri half chicken", "note": "Marinated overnight, mild or hot", "price": 19000, "image": "periperi" },
+        { "name": "Mixed grill platter", "note": "Steak, boerewors, chicken wings, for two", "price": 45000, "image": "mixed-grill" }
+      ]
+    },
+    {
+      "id": "local",
+      "name": "Local plates",
+      "image": "nsima-chambo",
+      "items": [
+        { "name": "Nsima with grilled chambo", "note": "Whole chambo, nkhwani, tomato relish", "price": 17000, "image": "nsima-chambo" },
+        { "name": "Nsima with beef stew", "note": "Slow cooked shin, greens, kachumbari", "price": 13000, "image": "nsima-beef" },
+        { "name": "Mbatata and bean stew", "note": "Sweet potato, red beans, groundnut sauce", "price": 9500, "image": "bean-stew" }
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "Fish",
+      "image": "butterfly-chambo",
+      "items": [
+        { "name": "Butterfly chambo", "note": "Pan fried in garlic butter, lemon, rice", "price": 19000, "image": "butterfly-chambo" },
+        { "name": "Grilled kampango", "note": "Open flame, chips and salad", "price": 17500, "image": "kampango" }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides and salads",
+      "image": "salad",
+      "items": [
+        { "name": "Nkhwani", "note": "Pumpkin leaves in groundnut flour", "price": 4000, "image": "nkhwani" },
+        { "name": "Garden salad", "note": "Tomato, cucumber, avocado, citrus dressing", "price": 5500, "image": "salad" }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "image": "cheesecake",
+      "items": [
+        { "name": "Mandasi with honey", "note": "Four pieces, served warm", "price": 4500, "image": "mandasi" },
+        { "name": "Baked cheesecake", "note": "Passion fruit coulis", "price": 6500, "image": "cheesecake" }
+      ]
+    }
+  ],
+  "bar": [
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "image": "sour",
+      "items": [
+        { "name": "Malawi Gin and tonic", "note": "Double, cucumber and pink pepper", "price": 8000, "image": "gin-tonic" },
+        { "name": "Tamarind sour", "note": "Rum, tamarind, lime", "price": 9000, "image": "sour" },
+        { "name": "Hibiscus spritz", "note": "Bissap, sparkling wine, soda", "price": 9500, "image": "spritz" }
+      ]
+    },
+    {
+      "id": "beers",
+      "name": "Beers and ciders",
+      "image": "lager",
+      "items": [
+        { "name": "Carlsberg Green, 500ml", "note": "", "price": 3200, "image": "lager" },
+        { "name": "Kuche Kuche, 500ml", "note": "", "price": 3000, "image": "kuche" },
+        { "name": "Savanna Dry, 330ml", "note": "", "price": 5000, "image": "cider" }
+      ]
+    },
+    {
+      "id": "wine",
+      "name": "Wine",
+      "image": "red-wine",
+      "items": [
+        { "name": "House red, glass", "note": "Cabernet Sauvignon, Western Cape", "price": 7000, "image": "red-wine" },
+        { "name": "House white, glass", "note": "Chenin Blanc, Western Cape", "price": 7000, "image": "white-wine" },
+        { "name": "House bottle", "note": "Red or white, ask for the list", "price": 32000, "image": "wine-bottle" }
+      ]
+    },
+    {
+      "id": "spirits",
+      "name": "Spirits",
+      "image": "whisky",
+      "items": [
+        { "name": "Whisky, single", "note": "Ask for the shelf list", "price": 6500, "image": "whisky" }
+      ]
+    },
+    {
+      "id": "soft",
+      "name": "Soft drinks",
+      "image": "soda",
+      "items": [
+        { "name": "Fanta, Coke or Sprite, 300ml", "note": "", "price": 2000, "image": "soda" },
+        { "name": "Fresh mango juice", "note": "Pressed to order", "price": 4500, "image": "mango-juice" },
+        { "name": "Still water, 500ml", "note": "", "price": 1800, "image": "water" }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "catering",
+      "name": "Catering and outside events",
+      "image": "hero-more",
+      "bio": "The kitchen caters weddings, funerals, church functions and corporate days. The team travels with its own equipment and staff, plates on site and clears afterwards. Menus are quoted per head, with a tasting arranged before the date.",
+      "points": ["Quoted per head", "Tasting before the date", "Staff, equipment and clearing included"]
+    },
+    {
+      "id": "paint",
+      "name": "Paint and sip nights",
+      "image": "paint",
+      "bio": "Canvas, easel, paints and a drink, with a guide walking the room through the piece. No experience needed and the canvas goes home with you. Runs as a scheduled evening and as a private booking for birthdays, hen parties and team nights.",
+      "points": ["Canvas and materials provided", "Open nights and private bookings", "Drinks from the bar"]
+    },
+    {
+      "id": "takeaway",
+      "name": "Takeaway and delivery",
+      "image": "burger",
+      "bio": "Orders are taken on WhatsApp for collection at the door and for delivery around Zomba. The kitchen packs takeaway in sealed containers. Delivery is charged by zone and the rider confirms arrival on the same thread you ordered on.",
+      "points": ["Order on WhatsApp", "Collection at the door", "Delivery charged by zone"]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Signature",
+  "fullName": "Signature Restaurant & Bar",
+  "formerName": "Signature Pub and Liquor Shop",
+  "tagline": "Food that tells a story",
+  "strapline": "Where every bite becomes a memory",
+  "blurb": "Local flavours, fast food, Indian dishes and drinks, in Zomba.",
+  "town": "Zomba",
+  "country": "Malawi",
+  "currency": "MK",
+  "whatsapp": "265999761070",
+  "whatsappDisplay": "+265 999 76 10 70",
+  "whatsappMessage": "Hello Signature, I am at a table and would like to order.",
+  "specialties": ["Dine-in", "Takeaway", "Outdoor seating", "Reservations"],
+  "hours": {
+    "kitchen": "11:00 to 22:00",
+    "bar": "11:00 until late"
+  },
+  "sections": [
+    {
+      "slug": "restaurant",
+      "title": "Restaurant",
+      "tagline": "Fast food, grill, Indian, local plates",
+      "hero": "hero-restaurant"
+    },
+    {
+      "slug": "bar",
+      "title": "Bar",
+      "tagline": "Cocktails, beer, wine, soft drinks",
+      "hero": "hero-bar"
+    },
+    {
+      "slug": "more",
+      "title": "More",
+      "tagline": "Catering, paint nights, takeaway",
+      "hero": "hero-more"
+    }
+  ]
+}

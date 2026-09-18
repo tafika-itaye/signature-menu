@@ -1,0 +1,20 @@
+---
+const { categories } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<nav class="deck" aria-label="Menu categories">
+  {
+    categories.map((cat) => (
+      <a href={`#${cat.id}`}>
+        <span class="art">
+          <img src={`${base}img/${cat.image}-sm.webp`} alt="" width="240" height="240" loading="lazy" decoding="async" />
+        </span>
+        <span class="meta">
+          <h3>{cat.name}</h3>
+          <span>{cat.items.length} items</span>
+        </span>
+      </a>
+    ))
+  }
+</nav>

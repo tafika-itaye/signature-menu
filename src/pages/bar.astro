@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import TopBar from "../components/TopBar.astro";
+import CategoryDeck from "../components/CategoryDeck.astro";
+import Course from "../components/Course.astro";
+import site from "../data/site.json";
+import menu from "../data/menu.json";
+
+const base = import.meta.env.BASE_URL;
+const categories = menu.bar;
+---
+
+<Base title={`Bar menu, ${site.name}`}>
+  <TopBar title="Bar" hours={`Bar ${site.hours.bar}`} />
+
+  <div class="sechero">
+    <img src={`${base}img/hero-bar.webp`} alt="" width="1200" height="900" loading="eager" decoding="async" />
+    <span class="scrim"></span>
+  </div>
+
+  <CategoryDeck categories={categories} />
+
+  {categories.map((category) => <Course category={category} />)}
+
+  <footer class="foot">
+    No alcohol served to persons under eighteen.<br />
+    Prices in Malawi kwacha and include VAT.
+  </footer>
+</Base>
